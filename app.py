@@ -329,8 +329,8 @@ def home():
             <h1>Free Fire<br>Player Info API</h1>
             <div class="badge"><div class="dot"></div>API IS RUNNING</div>
             
-            <div class="code-box" onclick="copyText('/info?uid={uid}')">/info?uid={uid}</div>
-            <div class="code-box" onclick="copyText('/wishlist?uid={uid}')">/wishlist?uid={uid}</div>
+            <div class="code-box" onclick="copyText('/info?uid={uid}&region=IND')">/info?uid={uid}&region=IND</div>
+            <div class="code-box" onclick="copyText('/wishlist?uid={uid}&region=IND')">/wishlist?uid={uid}&region=IND</div>
             
             <div class="regions">
                 <span class="region-tag">IND</span>
