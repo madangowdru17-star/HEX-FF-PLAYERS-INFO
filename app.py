@@ -244,7 +244,7 @@ def home():
                 border: 1px solid var(--glass-border); padding: 3rem 2rem;
                 border-radius: 24px; text-align: center;
                 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-                max-width: 600px; width: 90%; animation: float 6s ease-in-out infinite;
+                max-width: 700px; width: 90%; animation: float 6s ease-in-out infinite;
             }
 
             h1 {
@@ -259,7 +259,7 @@ def home():
                 background: rgba(0, 255, 148, 0.1); border: 1px solid rgba(0, 255, 148, 0.2);
                 color: var(--accent); padding: 8px 16px; border-radius: 100px;
                 font-size: 0.9rem; font-weight: 500; font-family: 'JetBrains Mono', monospace;
-                margin-bottom: 2rem; box-shadow: 0 0 15px rgba(0, 255, 148, 0.1);
+                margin-bottom: 1.5rem; box-shadow: 0 0 15px rgba(0, 255, 148, 0.1);
             }
 
             .dot {
@@ -269,15 +269,26 @@ def home():
 
             .code-box {
                 background: rgba(0, 0, 0, 0.3); border: 1px solid var(--glass-border);
-                border-radius: 12px; padding: 1.5rem; margin: 0 auto 1rem auto;
-                font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+                border-radius: 12px; padding: 1rem; margin: 0.5rem auto;
+                font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
                 color: #a5b4fc; word-break: break-all; cursor: pointer; transition: all 0.3s ease;
+                max-width: 90%;
             }
             
-            .code-box:last-of-type { margin-bottom: 2.5rem; }
             .code-box:hover { border-color: rgba(255, 255, 255, 0.3); transform: translateY(-2px); }
 
-            .footer-links { display: flex; flex-direction: column; gap: 12px; margin-top: 1rem; }
+            .regions {
+                display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+                margin: 1rem 0 1.5rem 0;
+            }
+            .region-tag {
+                background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 20px; padding: 4px 14px; font-size: 0.75rem;
+                font-family: 'JetBrains Mono', monospace; color: #cbd5e1;
+                letter-spacing: 0.5px;
+            }
+
+            .footer-links { display: flex; flex-direction: column; gap: 12px; margin-top: 1.5rem; }
 
             .btn {
                 text-decoration: none; padding: 12px 20px; border-radius: 12px;
@@ -305,6 +316,11 @@ def home():
                 50% { transform: translateY(-10px); }
                 100% { transform: translateY(0px); }
             }
+            @media (max-width: 600px) {
+                .container { padding: 2rem 1rem; }
+                h1 { font-size: 2rem; }
+                .code-box { font-size: 0.75rem; padding: 0.8rem; }
+            }
         </style>
     </head>
     <body>
@@ -312,13 +328,28 @@ def home():
         <div class="container">
             <h1>Free Fire<br>Player Info API</h1>
             <div class="badge"><div class="dot"></div>API IS RUNNING</div>
+            
             <div class="code-box" onclick="copyText('/info?uid={uid}')">/info?uid={uid}</div>
             <div class="code-box" onclick="copyText('/wishlist?uid={uid}')">/wishlist?uid={uid}</div>
+            
+            <div class="regions">
+                <span class="region-tag">IND</span>
+                <span class="region-tag">BR</span>
+                <span class="region-tag">US</span>
+                <span class="region-tag">BD</span>
+                <span class="region-tag">PK</span>
+                <span class="region-tag">VN</span>
+                <span class="region-tag">ME</span>
+                <span class="region-tag">TH</span>
+                <span class="region-tag">SAC</span>
+                <span class="region-tag">ID</span>
+            </div>
+            
             <div class="footer-links">
-                <a href="#" target="_blank" class="btn btn-credit">
+                <a href="#" class="btn btn-credit" target="_blank">
                     <i class="fas fa-user"></i><span>Credit: @HeX_CiPhEr</span>
                 </a>
-                <a href="#" target="_blank" class="btn btn-power">
+                <a href="https://t.me/+cw2T3ukUyN9iMTE1" target="_blank" class="btn btn-power">
                     <i class="fas fa-bolt"></i><span>TELEGRAM: @HeX_CiPhEr</span>
                 </a>
             </div>
